@@ -11,6 +11,17 @@
 |
 */
 
+
+Route::get('books', function () {
+    
+    $books = DB::table('books')->get();
+ 
+    return view('books', ['books' => $books]);
+});
+
 Route::get('/', function () {
-    return view('welcome');
+    
+    $books = DB::table('books')->get();
+ 
+    return view('books', ['books' => $books]);
 });
