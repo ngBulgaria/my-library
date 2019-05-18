@@ -20,6 +20,7 @@ class CreateBooksTable extends Migration
             $table->integer('year');
             $table->longText('description');
             $table->string('cover_image');
+            $table->bigInteger('user_id');
             $table->timestamps();
         });
     }
