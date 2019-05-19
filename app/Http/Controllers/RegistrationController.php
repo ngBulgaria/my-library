@@ -32,6 +32,7 @@ class RegistrationController extends Controller
         return redirect()->to('/');
     }
 
+    /*Edit method to get data and display template*/
     public function edit()
     {
         if(auth()->check())
@@ -47,6 +48,11 @@ class RegistrationController extends Controller
 
     }
 
+    /*
+    Check old password match
+    also check if new email is unique
+    and store edited profile
+    */
     public function save()
     {
         $password = request('password');

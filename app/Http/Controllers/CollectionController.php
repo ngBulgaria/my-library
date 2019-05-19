@@ -1,4 +1,8 @@
 <?php
+/*
+Controller for managing collections - favourite books:
+My collection / Add to collection / Remove from collection
+*/
 
 namespace App\Http\Controllers;
 
@@ -32,24 +36,6 @@ class CollectionController extends Controller
     	
     }
 
-    /*Remove book from collection method*/
-    public function remove($id)
-    {
-        if(auth()->check())
-        {
-            DB::table('collections')->where('book_id',$id)
-                                    ->where('user_id',auth()->user()->id)
-                                    ->delete();
-
-            return redirect()->back();
-        }
-
-        else
-        {
-            return redirect()->to('/logout');
-        }
-    }
-
     /*Add book to collection method*/
     public function add($id)
     {
@@ -64,6 +50,24 @@ class CollectionController extends Controller
             $collection->save();
 
             return  redirect()->back();
+        }
+
+        else
+        {
+            return redirect()->to('/logout');
+        }
+    }
+
+    /*Remove book from collection method*/
+    public function remove($id)
+    {
+        if(auth()->check())
+        {
+            DB::table('collections')->where('book_id',$id)
+                                    ->where('user_id',auth()->user()->id)
+                                    ->delete();
+
+            return redirect()->back();
         }
 
         else

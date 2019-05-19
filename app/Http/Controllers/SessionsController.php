@@ -1,4 +1,7 @@
 <?php
+/*
+Session Controller for log in form / login /log out
+*/
  
 namespace App\Http\Controllers;
  
