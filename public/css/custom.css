@@ -1,0 +1,13 @@
+.container{display:flex;justify-content: center;align-items: center;flex-wrap: wrap;}
+h2,h1{width:100%;}
+footer{position:fixed;bottom:0}
+ul{width:100%;}
+#register{width: 440px;max-width: 100%;}
+#login{width: 440px;max-width: 100%;}
+#add_book{width: 440px;max-width: 100%;}
+.nav-link:hover{background-color:#999;color:#fff!important;transition: 0.5s;}
+img{width:400px;height: auto;}
+.space{width:100%;height:10px;}
+.p50{width:50%;}
+.pleft{padding-left: 10px;}
+.pright{padding-right: 10px;text-align: right;}
